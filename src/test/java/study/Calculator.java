@@ -20,13 +20,13 @@ public class Calculator {
     private void operate(int index) {
         String operator = values[index];
         int calNumber = Integer.parseInt(values[index+1]);
-        if (operator == "+")
+        if (operator.equals("+"))
             lastNumber = add(lastNumber, calNumber);
-        else if (operator == "-")
+        else if (operator.equals("-"))
             lastNumber = subtract(lastNumber, calNumber);
-        else if (operator == "*")
+        else if (operator.equals("*"))
             lastNumber = multiply(lastNumber, calNumber);
-        else if (operator == "/")
+        else if (operator.equals("/"))
             lastNumber = divide(lastNumber, calNumber);
     }
 
