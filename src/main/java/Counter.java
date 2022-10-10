@@ -15,4 +15,10 @@ public class Counter {
         else if (matchingIndex > 0)
             increaseBall();
     }
+    public int getBall() {
+        return ball;
+    }
+    public int getStrike() {
+        return strike;
+    }
 }

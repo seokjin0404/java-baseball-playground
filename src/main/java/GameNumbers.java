@@ -10,6 +10,10 @@ public class GameNumbers {
         return Integer.toString(1+(int)(Math.random()*9));
     }
 
+    public void setPlayerNumbers(String playerNumbers) {
+        this.playerNumbers = playerNumbers;
+    }
+
     public String getPlayerNumbers() {
         return playerNumbers;
     }
