@@ -15,11 +15,10 @@ public class BaseballGame {
     }
     private boolean keepGame() {
         int strike = counter.getStrike();
-        if (strike != 3) {
-            return true;
-        } else if (strike == 3) {
+        if (strike == 3) {
             return false;
         }
+        return true;
     }
     public void inGame() {
         boolean gameContinue = true;
@@ -33,7 +32,6 @@ public class BaseballGame {
         }
     }
     public void restartGame() {
-        ResultView.restartMessage();
         int num = InputView.readRestart();
         if (num == 1) {
             inGame();

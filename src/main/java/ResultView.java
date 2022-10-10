@@ -11,8 +11,8 @@ public class ResultView {
         } else if (strike != 0) {
             System.out.printf("%d스트라이크", strike);
         }
-    }
-    public static void restartMessage() {
-        System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요");
+        if (ball == 0 && strike == 0) {
+            System.out.println("낫싱");
+        }
     }
 }
