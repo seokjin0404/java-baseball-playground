@@ -19,4 +19,11 @@ public class Ball {
             return Referee.Ball;
         return Referee.Nothing;
     }
+
+
+    public boolean equals(Ball ball) {
+        if (place == ball.place && value == ball.value)
+            return true;
+        return false;
+    }
 }
