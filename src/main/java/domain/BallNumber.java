@@ -1,6 +1,8 @@
 package domain;
 
 public class BallNumber {
+    private static final int minPosition = 1;
+    private static final int maxPosition = 9;
 
     private int ballNumber;
 
@@ -8,6 +10,8 @@ public class BallNumber {
         ballNumber = other.ballNumber;
     }
     public BallNumber(int ballNumber) {
+        if (ballNumber<minPosition||ballNumber>maxPosition)
+            throw new IllegalArgumentException();
         this.ballNumber = ballNumber;
     }
     public boolean sameNumber(BallNumber ballNumber) {

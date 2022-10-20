@@ -3,7 +3,7 @@ package domain;
 public class Position {
     private int position;
     public Position(Position other) {
-        position = other.position;
+        this(other.position);
     }
     public Position(int position) {
         this.position = position;
