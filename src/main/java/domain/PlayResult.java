@@ -18,4 +18,20 @@ public class PlayResult {
         if (status.isBall())
             ball += 1;
     }
+
+    public boolean hasNothing() {
+        return (strike==0 && ball==0);
+    }
+
+    public boolean hasBall() {
+        return ball!=0;
+    }
+
+    public boolean hasStrike() {
+        return strike!=0;
+    }
+
+    public boolean GameEnd() {
+        return strike==3;
+    }
 }

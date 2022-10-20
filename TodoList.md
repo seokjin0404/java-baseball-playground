@@ -8,5 +8,5 @@
   * [x] 컴퓨터 공 3개와 플레이어 공 3개
 
 * application
-  * [ ] 위에서 구현한 domain 을 종합
-  * [ ] resultView와 inputView로 구현
+  * [x] 위에서 구현한 domain 을 종합
+  * [x] resultView와 inputView로 구현
