@@ -22,6 +22,14 @@ public class Balls {
         }
         return mappedBalls;
     }
+    public PlayResult play(List<Integer> balls) {
+        PlayResult result = new PlayResult();
+        List<Ball> playerBalls = mapBalls(balls);
+        for (int i=0; i<3; i++) {
+            result.report(this.play(playerBalls.get(i)));
+        }
+        return result;
+    }
 
     public BallStatus play(Ball ball) {
         for (int i = 0; i<3; i++) {
