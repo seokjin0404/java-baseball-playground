@@ -2,9 +2,7 @@ import domain.Balls;
 import domain.PlayResult;
 import domain.ResultView;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Application {
     private static Scanner keyboard = new Scanner(System.in);
@@ -42,9 +40,20 @@ public class Application {
     }
 
     private static void setRandomNumber(List<Integer> computerNumbers) {
+        Set<Integer> numberSet = new HashSet<>();
+        int randomNumber;
         for (int i = 0; i < 3; i++) {
-            computerNumbers.add((int) (Math.random() * 9) + 1);
+            randomNumber = getRandomNumber(numberSet);
+            computerNumbers.add(randomNumber);
         }
+    }
+    private static int getRandomNumber(Set<Integer> numberSet) {
+        int randomNumber;
+        do {
+            randomNumber = (int) (Math.random() * 9) + 1;
+        } while(numberSet.contains(randomNumber));
+        numberSet.add(randomNumber);
+        return randomNumber;
     }
 
     private static List<Integer> mapNumbers(String numbers) {
