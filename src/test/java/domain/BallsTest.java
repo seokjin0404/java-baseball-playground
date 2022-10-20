@@ -8,6 +8,13 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
 public class BallsTest {
+
+    @Test
+    public void strike() {
+        Balls computerBalls = new Balls(Arrays.asList(1,2,3));
+        BallStatus status = computerBalls.play(new Ball(new Position(1), new BallNumber(1)));
+        assertThat(status).isEqualTo(BallStatus.Strike);
+    }
     @Test
     public void ball() {
         Balls computerBalls = new Balls(Arrays.asList(1,2,3));
